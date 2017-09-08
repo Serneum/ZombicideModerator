@@ -1,0 +1,13 @@
+<h2>Show Set</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @set.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: set_path(@conn, :edit, @set) %></span>
+<span><%= link "Back", to: set_path(@conn, :index) %></span>

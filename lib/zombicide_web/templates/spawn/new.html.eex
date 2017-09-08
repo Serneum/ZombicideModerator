@@ -1,0 +1,5 @@
+<h2>New Spawn</h2>
+
+<%= render "form.html", Map.put(assigns, :action, spawn_path(@conn, :create)) %>
+
+<span><%= link "Back", to: spawn_path(@conn, :index) %></span>

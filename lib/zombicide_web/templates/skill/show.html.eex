@@ -1,0 +1,18 @@
+<h2>Show Skill</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @skill.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @skill.description %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: skill_path(@conn, :edit, @skill) %></span>
+<span><%= link "Back", to: skill_path(@conn, :index) %></span>
