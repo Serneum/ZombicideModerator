@@ -8,11 +8,12 @@ defmodule Zombicide.Cards do
 
   alias Zombicide.Cards.Equipment
   alias Zombicide.Cards.Spawn
+  alias Zombicide.Cards.Set
 
-  def list_cards_in_set(card_type, set_ids) when is_list(set_ids) do
+  defp list_cards_in_set(card_type, set_ids) when is_list(set_ids) do
     from(e in card_type, where: e.set_id in ^set_ids) |> Repo.all
   end
-  def list_cards_in_set(card_type, set_id) do
+  defp list_cards_in_set(card_type, set_id) do
     list_cards_in_set(card_type, [set_id])
   end
 
@@ -212,8 +213,6 @@ defmodule Zombicide.Cards do
   def change_spawn(%Spawn{} = spawn) do
     Spawn.changeset(spawn, %{})
   end
-
-  alias Zombicide.Cards.Set
 
   @doc """
   Returns the list of sets.

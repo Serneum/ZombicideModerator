@@ -17,6 +17,7 @@ defmodule ZombicideWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    post "/", PageController, :index
 
     resources "/equipment", EquipmentController
     resources "/sets", SetController
