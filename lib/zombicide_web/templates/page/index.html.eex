@@ -18,7 +18,7 @@
   </div>
 
   <input type="button" value="Spawn" id="spawn-trigger" />
-  <%= button("Search", to: "#", id: 'equip-trigger') %>
+  <input type="button" value="Search" id="equip-trigger" />
 </div>
 
 <script type="text/javascript">
