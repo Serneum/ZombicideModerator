@@ -14,7 +14,15 @@
 <% end %>
 
 <div>
-  <div class="card-holder" id="card-holder">
+  <div id="counters">
+    <span id="spawn-counter">
+    </span>
+
+    <span id="equipment-counter" class="float-right">
+    </span>
+  </div>
+
+  <div id="card-holder" class="card">
   </div>
 
   <input type="button" value="Spawn" id="spawn-trigger" />

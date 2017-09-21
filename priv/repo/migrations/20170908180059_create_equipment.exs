@@ -4,6 +4,7 @@ defmodule Zombicide.Repo.Migrations.CreateEquipment do
   def change do
     create table(:equipment) do
       add :name, :string
+      add :description, :text
       add :set_id, references(:sets, on_delete: :nothing)
 
       timestamps()

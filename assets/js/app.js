@@ -23,12 +23,13 @@ import "phoenix_html"
 global.cardSelector = new function() {
   var remainingSpawns = [];
   var usedSpawns = [];
-  var remainingEquipment = [];
-  var usedEquipment = [];
+  var equipment = [];
 
   this.init = function(spawnSeed, equipmentSeed) {
     remainingSpawns = spawnSeed;
-    remainingEquipment = equipmentSeed;
+    equipment = equipmentSeed;
+    updateSpawnCounter();
+    updateEquipCounter();
 
     document.getElementById('spawn-trigger').onclick = function() {
       if (remainingSpawns.length <= 0) {
@@ -38,19 +39,20 @@ global.cardSelector = new function() {
 
       var card = remainingSpawns.splice(Math.floor(Math.random() * remainingSpawns.length), 1)[0];
       usedSpawns.push(card);
-
-      var table = document.createElement('div');
-      table.className = 'card';
-
-      addSpawnRow(table, 'red', card.red);
-      addSpawnRow(table, 'orange', card.orange);
-      addSpawnRow(table, 'yellow', card.yellow);
-      addSpawnRow(table, 'blue', card.blue);
-
-      displayCard(table);
+      updateSpawnCounter();
+      displaySpawnCard(card);
     };
 
     document.getElementById('equip-trigger').onclick = function() {
+      if (equipment.length > 0) {
+        var card = equipment.splice(Math.floor(Math.random() * equipment.length), 1)[0];
+        updateEquipCounter();
+        displayEquipCard(card);
+
+        if (equipment.length <= 0) {
+          document.getElementById('equip-trigger').disabled = true;
+        }
+      }
     };
   };
 
@@ -60,16 +62,50 @@ global.cardSelector = new function() {
       cardHolder.removeChild(cardHolder.firstChild)
     }
 
-    cardHolder.appendChild(content);
+    content.forEach(function(elem) {
+      cardHolder.appendChild(elem);
+    });
   };
 
-  function addSpawnRow(table, color, content) {
+  function displaySpawnCard(card) {
+    var red = addSpawnRow('red', card.red);
+    var orange = addSpawnRow('orange', card.orange);
+    var yellow = addSpawnRow('yellow', card.yellow);
+    var blue = addSpawnRow('blue', card.blue);
+    displayCard([red, orange, yellow, blue]);
+  };
+
+  function displayEquipCard(card) {
+    var item = document.createElement('div');
+    item.className = "row equip-top";
+    var itemContent = document.createTextNode(card.name);
+    item.appendChild(itemContent);
+
+    var desc = document.createElement('div');
+    desc.className = "row equip-desc";
+    var descContent = document.createTextNode(card.description);
+    desc.appendChild(descContent);
+
+    displayCard([item, desc]);
+  };
+
+  function addSpawnRow(color, content) {
     var row = document.createElement('div');
-    row.className = color + " row";
+    row.className = color + " row spawn-row";
 
     var contentNode = document.createTextNode(content);
     row.appendChild(contentNode);
 
-    table.appendChild(row);
+    return row;
+  };
+
+  function updateSpawnCounter() {
+    var counter = document.getElementById('spawn-counter');
+    counter.innerHTML = 'Spawn Cards Remaining: ' + remainingSpawns.length;
+  };
+
+  function updateEquipCounter() {
+    var counter = document.getElementById('equipment-counter');
+    counter.innerHTML = 'Equipment Cards Remaining: ' + equipment.length;
   };
 };
