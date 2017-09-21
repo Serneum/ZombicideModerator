@@ -11,6 +11,16 @@
   <div>
     <%= submit "Generate Deck" %>
   </div>
-
-  <div>Cards: <%= length(@spawns) %></div>
 <% end %>
+
+<div>
+  <div class="card-holder" id="card-holder">
+  </div>
+
+  <input type="button" value="Spawn" id="spawn-trigger" />
+  <%= button("Search", to: "#", id: 'equip-trigger') %>
+</div>
+
+<script type="text/javascript">
+  cardSelector.init(window.Gon.getAsset('spawns'), window.Gon.getAsset('equipment'));
+</script>

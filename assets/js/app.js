@@ -19,3 +19,57 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+global.cardSelector = new function() {
+  var remainingSpawns = [];
+  var usedSpawns = [];
+  var remainingEquipment = [];
+  var usedEquipment = [];
+
+  this.init = function(spawnSeed, equipmentSeed) {
+    remainingSpawns = spawnSeed;
+    remainingEquipment = equipmentSeed;
+
+    document.getElementById('spawn-trigger').onclick = function() {
+      if (remainingSpawns.length <= 0) {
+        remainingSpawns = usedSpawns;
+        usedSpawns = [];
+      }
+
+      var card = remainingSpawns.splice(Math.floor(Math.random() * remainingSpawns.length), 1)[0];
+      usedSpawns.push(card);
+
+      var table = document.createElement('div');
+      table.className = 'card';
+
+      addSpawnRow(table, 'red', card.red);
+      addSpawnRow(table, 'orange', card.orange);
+      addSpawnRow(table, 'yellow', card.yellow);
+      addSpawnRow(table, 'blue', card.blue);
+
+      displayCard(table);
+    };
+
+    document.getElementById('equip-trigger').onclick = function() {
+    };
+  };
+
+  function displayCard(content) {
+    var cardHolder = document.getElementById('card-holder');
+    while (cardHolder.firstChild) {
+      cardHolder.removeChild(cardHolder.firstChild)
+    }
+
+    cardHolder.appendChild(content);
+  };
+
+  function addSpawnRow(table, color, content) {
+    var row = document.createElement('div');
+    row.className = color + " row";
+
+    var contentNode = document.createTextNode(content);
+    row.appendChild(contentNode);
+
+    table.appendChild(row);
+  };
+};
