@@ -1,12 +1,37 @@
 <%= form_for @conn, page_path(@conn, :index), [as: :index], fn f -> %>
-  <%= for set <- @sets do %>
-    <%= inputs_for f, :sets, fn s -> %>
-      <span>
-        <%= checkbox(s, String.to_atom("#{set.id}")) %>
-        <%= label(s, String.to_atom("#{set.name}"), set.name) %>
-      </span>
+  <div>
+    <label>Sets: </label>
+    <%= for set <- Enum.slice(@sets, 0..4) do %>
+      <%= inputs_for f, :sets, fn s -> %>
+        <span>
+          <%= checkbox(s, String.to_atom("#{set.id}")) %>
+          <%= label(s, String.to_atom("#{set.name}"), set.name) %>
+        </span>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
+  <div>
+    <label>Abominations: </label>
+    <%= for set <- Enum.slice(@sets, 5..9) do %>
+      <%= inputs_for f, :sets, fn s -> %>
+        <span>
+          <%= checkbox(s, String.to_atom("#{set.id}")) %>
+          <%= label(s, String.to_atom("#{set.name}"), set.name) %>
+        </span>
+      <% end %>
+    <% end %>
+  </div>
+  <div>
+    <label>Necromancers: </label>
+    <%= for set <- Enum.slice(@sets, 10..16) do %>
+      <%= inputs_for f, :sets, fn s -> %>
+        <span>
+          <%= checkbox(s, String.to_atom("#{set.id}")) %>
+          <%= label(s, String.to_atom("#{set.name}"), set.name) %>
+        </span>
+      <% end %>
+    <% end %>
+  </div>
 
   <div>
     <%= submit "Generate Deck" %>
