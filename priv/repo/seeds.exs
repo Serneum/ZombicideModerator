@@ -10,15 +10,23 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 Code.require_file("seeds/skills.exs", __DIR__)
+
 Code.require_file("seeds/spawn/black_plague.exs", __DIR__)
 Code.require_file("seeds/spawn/wulfsburg.exs", __DIR__)
 Code.require_file("seeds/spawn/crowz.exs", __DIR__)
 Code.require_file("seeds/spawn/deadeye.exs", __DIR__)
 Code.require_file("seeds/spawn/abominations.exs", __DIR__)
 
+Code.require_file("seeds/equip/black_plague.exs", __DIR__)
+Code.require_file("seeds/equip/wulfsburg.exs", __DIR__)
+
 Skills.seed()
-BlackPlague.seed()
-Wulfsburg.seed()
-MurderOfCrowz.seed()
-DeadeyeWalkers.seed()
-Abominations.seed()
+
+BlackPlague.Spawn.seed()
+Wulfsburg.Spawn.seed()
+MurderOfCrowz.Spawn.seed()
+DeadeyeWalkers.Spawn.seed()
+Abominations.Spawn.seed()
+
+BlackPlague.Equip.seed()
+Wulfsburg.Equip.seed()

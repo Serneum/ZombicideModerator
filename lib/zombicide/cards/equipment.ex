@@ -5,7 +5,6 @@ defmodule Zombicide.Cards.Equipment do
 
   @derive {Poison.Encoder, except: [:__meta__]}
   schema "equipment" do
-    field :description, :string
     field :name, :string
     field :set_id, :id
 
@@ -15,7 +14,7 @@ defmodule Zombicide.Cards.Equipment do
   @doc false
   def changeset(%Equipment{} = equipment, attrs) do
     equipment
-    |> cast(attrs, [:name, :description])
+    |> cast(attrs, [:name])
     |> validate_required([:name])
   end
 end

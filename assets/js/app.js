@@ -92,8 +92,6 @@ global.cardSelector = new function() {
 
     var desc = document.createElement('div');
     desc.className = "row equip-desc";
-    var descContent = document.createTextNode(card.description);
-    desc.appendChild(descContent);
 
     displayCard([item, desc]);
   };
