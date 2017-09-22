@@ -9,6 +9,7 @@ defmodule Necromancers do
       Repo.insert(%Set{id: 15, name: "Queen Medea"})
       Repo.insert(%Set{id: 16, name: "Grin"})
       Repo.insert(%Set{id: 17, name: "The Blackheart"})
+      Repo.insert(%Set{id: 18, name: "Erik the Summoner"})
 
       Repo.insert!(%Spawn{set_id: 12, blue: "To-Me Ku-Pa", yellow: "To-Me Ku-Pa", orange: "To-Me Ku-Pa", red: "To-Me Ku-Pa"})
       Repo.insert!(%Spawn{set_id: 12, blue: "To-Me Ku-Pa", yellow: "To-Me Ku-Pa", orange: "To-Me Ku-Pa", red: "To-Me Ku-Pa"})
@@ -51,6 +52,13 @@ defmodule Necromancers do
       Repo.insert!(%Spawn{set_id: 17, blue: "Blackheart", yellow: "Blackheart", orange: "Blackheart", red: "Blackheart"})
       Repo.insert!(%Spawn{set_id: 17, blue: "Blackheart", yellow: "Blackheart", orange: "Blackheart", red: "Blackheart"})
       Repo.insert!(%Spawn{set_id: 17, blue: "Blackheart", yellow: "Blackheart", orange: "Blackheart", red: "Blackheart"})
+
+      Repo.insert!(%Spawn{set_id: 18, blue: "Erik", yellow: "Erik", orange: "Erik", red: "Erik"})
+      Repo.insert!(%Spawn{set_id: 18, blue: "Erik", yellow: "Erik", orange: "Erik", red: "Erik"})
+      Repo.insert!(%Spawn{set_id: 18, blue: "Erik", yellow: "Erik", orange: "Erik", red: "Erik"})
+      Repo.insert!(%Spawn{set_id: 18, blue: "Erik", yellow: "Erik", orange: "Erik", red: "Erik"})
+      Repo.insert!(%Spawn{set_id: 18, blue: "Erik", yellow: "Erik", orange: "Erik", red: "Erik"})
+      Repo.insert!(%Spawn{set_id: 18, blue: "Erik", yellow: "Erik", orange: "Erik", red: "Erik"})
     end
   end
 end

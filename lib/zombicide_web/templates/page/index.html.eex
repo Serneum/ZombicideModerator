@@ -1,7 +1,7 @@
 <%= form_for @conn, page_path(@conn, :index), [as: :index], fn f -> %>
   <div>
     <label>Sets: </label>
-    <%= for set <- Enum.slice(@sets, 0..4) do %>
+    <%= for set <- Enum.slice(@sets, 0..5) do %>
       <%= inputs_for f, :sets, fn s -> %>
         <span>
           <%= checkbox(s, String.to_atom("#{set.id}")) %>
@@ -12,7 +12,7 @@
   </div>
   <div>
     <label>Abominations: </label>
-    <%= for set <- Enum.slice(@sets, 5..9) do %>
+    <%= for set <- Enum.slice(@sets, 6..10) do %>
       <%= inputs_for f, :sets, fn s -> %>
         <span>
           <%= checkbox(s, String.to_atom("#{set.id}")) %>
@@ -23,7 +23,7 @@
   </div>
   <div>
     <label>Necromancers: </label>
-    <%= for set <- Enum.slice(@sets, 10..16) do %>
+    <%= for set <- Enum.slice(@sets, 11..17) do %>
       <%= inputs_for f, :sets, fn s -> %>
         <span>
           <%= checkbox(s, String.to_atom("#{set.id}")) %>
