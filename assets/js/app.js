@@ -85,15 +85,11 @@ global.cardSelector = new function() {
   };
 
   function displayEquipCard(card) {
-    var item = document.createElement('div');
-    item.className = "row equip-top";
-    var itemContent = document.createTextNode(card.name);
-    item.appendChild(itemContent);
-
-    var desc = document.createElement('div');
-    desc.className = "row equip-desc";
-
-    displayCard([item, desc]);
+    var item = document.createElement('img');
+    item.src = "images/equipment/" + card.name + ".jpg";
+    item.alt = card.name;
+    item.title = card.name;
+    displayCard([item]);
   };
 
   function addSpawnRow(color, content) {
