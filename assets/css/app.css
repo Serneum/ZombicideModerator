@@ -1,4 +1,13 @@
 /* This file is for your main application css. */
+input[type="button"], button[type="submit"] {
+  color: black;
+}
+
+body.dark {
+  color: white;
+  background-image: url("../images/background-bp.jpg");
+}
+
 .row {
   text-align: center;
   vertical-align: middle;
