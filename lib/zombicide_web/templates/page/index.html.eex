@@ -22,11 +22,13 @@
     </span>
   </div>
 
-  <div id="card-holder" class="card">
+  <div id="card-holder" class="card centered">
   </div>
 
-  <input type="button" value="Spawn" id="spawn-trigger" />
-  <input type="button" value="Search" id="equip-trigger" />
+  <div class="centered">
+    <input type="button" value="Spawn" id="spawn-trigger" />
+    <input type="button" value="Search" id="equip-trigger" />
+  </div>
 </div>
 
 <script type="text/javascript">

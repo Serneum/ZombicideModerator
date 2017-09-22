@@ -5,14 +5,22 @@
   line-height: 75px;
 }
 
+.row.top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.row.bottom {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 .spawn-row {
   height: 25%;
 }
 
 .red {
   background-color: red;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 
 .orange {
@@ -26,20 +34,14 @@
 
 .blue {
   background-color: blue;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
 .equip-top {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
   color: black;
   height: 75%;
 }
 
 .equip-desc {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   color: black;
   height: 25%;
 }
@@ -48,11 +50,15 @@
   color: white;
   width: 240px;
   height: 300px;
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 10px;
 }
 
 .float-right {
   float: right;
+}
+
+.centered {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }

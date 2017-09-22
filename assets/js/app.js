@@ -32,15 +32,17 @@ global.cardSelector = new function() {
     updateEquipCounter();
 
     document.getElementById('spawn-trigger').onclick = function() {
-      if (remainingSpawns.length <= 0) {
+      if (remainingSpawns && remainingSpawns.length <= 0) {
         remainingSpawns = usedSpawns;
         usedSpawns = [];
       }
 
       var card = remainingSpawns.splice(Math.floor(Math.random() * remainingSpawns.length), 1)[0];
-      usedSpawns.push(card);
-      updateSpawnCounter();
-      displaySpawnCard(card);
+      if (card) {
+        usedSpawns.push(card);
+        updateSpawnCounter();
+        displaySpawnCard(card);
+      }
     };
 
     document.getElementById('equip-trigger').onclick = function() {
@@ -62,7 +64,14 @@ global.cardSelector = new function() {
       cardHolder.removeChild(cardHolder.firstChild)
     }
 
-    content.forEach(function(elem) {
+    content.forEach(function(elem, i) {
+      if (i == 0) {
+        elem.className += " top";
+      }
+      else if (i == content.length - 1) {
+        elem.className += " bottom";
+      }
+
       cardHolder.appendChild(elem);
     });
   };
