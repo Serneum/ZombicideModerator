@@ -11,7 +11,7 @@ defmodule Zombicide.Cards do
   alias Zombicide.Cards.Set
 
   defp list_cards_in_set(card_type, set_ids) when is_list(set_ids) do
-    from(e in card_type, where: e.set_id in ^set_ids) |> Repo.all
+    from(e in card_type, where: e.set_id in ^set_ids) |> preload(:set) |> Repo.all
   end
   defp list_cards_in_set(card_type, set_id) do
     list_cards_in_set(card_type, [set_id])

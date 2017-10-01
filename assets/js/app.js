@@ -64,40 +64,81 @@ global.cardSelector = new function() {
       cardHolder.removeChild(cardHolder.firstChild)
     }
 
-    content.forEach(function(elem, i) {
-      if (i == 0) {
-        elem.className += " top";
-      }
-      else if (i == content.length - 1) {
-        elem.className += " bottom";
-      }
-
-      cardHolder.appendChild(elem);
-    });
+    cardHolder.appendChild(content);
   };
 
   function displaySpawnCard(card) {
-    var red = addSpawnRow('red', card.red);
-    var orange = addSpawnRow('orange', card.orange);
-    var yellow = addSpawnRow('yellow', card.yellow);
-    var blue = addSpawnRow('blue', card.blue);
-    displayCard([red, orange, yellow, blue]);
+    var spawn = document.createElement('div');
+    spawn.className = 'spawn';
+
+    var spawnImg = document.createElement('img');
+    spawnImg.className = card.set.color || 'red';
+    spawn.appendChild(spawnImg);
+
+    var titleWrapper = document.createElement('div');
+    titleWrapper.className = 'title';
+    var title = document.createTextNode(card.title);
+    titleWrapper.appendChild(title);
+
+    var idWrapper = document.createElement('div');
+    idWrapper.className = 'spawn-level id';
+    var id = document.createTextNode(card.id < 10 ? '0' + card.id : card.id);
+    idWrapper.appendChild(id);
+
+    var red = addSpawnRow('red', card.red, card.r_count);
+    var orange = addSpawnRow('orange', card.orange, card.o_count);
+    var yellow = addSpawnRow('yellow', card.yellow, card.y_count);
+    var blue = addSpawnRow('blue', card.blue, card.b_count);
+
+    spawn.appendChild(titleWrapper);
+    spawn.appendChild(idWrapper);
+    spawn.appendChild(red);
+    spawn.appendChild(orange);
+    spawn.appendChild(yellow);
+    spawn.appendChild(blue);
+
+    displayCard(spawn);
   };
 
   function displayEquipCard(card) {
     var item = document.createElement('img');
-    item.src = "images/equipment/" + card.name + ".jpg";
+    item.src = 'images/equipment/' + card.name + '.jpg';
     item.alt = card.name;
     item.title = card.name;
-    displayCard([item]);
+    displayCard(item);
   };
 
-  function addSpawnRow(color, content) {
+  function addSpawnRow(position, type, count) {
     var row = document.createElement('div');
-    row.className = color + " row spawn-row";
+    row.className = 'spawn-level ' + position;
 
-    var contentNode = document.createTextNode(content);
-    row.appendChild(contentNode);
+    var typeWrapper = document.createElement('div');
+    typeWrapper.className = 'type'
+    var typeNode = document.createTextNode(type);
+    typeWrapper.appendChild(typeNode);
+    row.appendChild(typeWrapper);
+
+    var iconWrapper = document.createElement('div');
+    iconWrapper.className = 'amount spawn-image inline-block';
+    var iconNode = document.createElement('img');
+    iconNode.className = type.toLowerCase().replace(/\s+/g, '-');
+    iconWrapper.appendChild(iconNode)
+    row.appendChild(iconWrapper);
+
+    if (count > 0) {
+      var multiplierWrapper = document.createElement('div');
+      multiplierWrapper.className = 'amount multiplier inline-block';
+      var multiplierNode = document.createTextNode('x');
+      multiplierWrapper.appendChild(multiplierNode);
+
+      var countWrapper = document.createElement('div');
+      countWrapper.className = 'amount count inline-block';
+      var countNode = document.createTextNode(count);
+      countWrapper.appendChild(countNode);
+
+      row.appendChild(multiplierWrapper);
+      row.appendChild(countWrapper);
+    }
 
     return row;
   };

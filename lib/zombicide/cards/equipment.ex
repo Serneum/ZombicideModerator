@@ -6,7 +6,7 @@ defmodule Zombicide.Cards.Equipment do
   @derive {Poison.Encoder, except: [:__meta__]}
   schema "equipment" do
     field :name, :string
-    field :set_id, :id
+    belongs_to :set, Zombicide.Cards.Set
 
     timestamps()
   end
