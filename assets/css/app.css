@@ -83,10 +83,25 @@ img, .row {
   content: url('../images/spawn/SpawnBlue.jpg');
 }
 
+.spawn img.darkblue {
+  content: url('../images/spawn/SpawnDarkBlue.jpg');
+}
+
+.spawn img.green {
+  content: url('../images/spawn/SpawnGreen.jpg');
+}
+
+.spawn img.yellow {
+  content: url('../images/spawn/SpawnYellow.jpg');
+}
+
+.spawn img.teal {
+  content: url('../images/spawn/SpawnTeal.jpg');
+}
+
 .spawn img.violet {
   content: url('../images/spawn/SpawnViolet.jpg');
 }
-
 
 .spawn .title {
   font-family: AlgoFYRegular;
