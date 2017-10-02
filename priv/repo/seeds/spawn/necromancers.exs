@@ -9,7 +9,7 @@ defmodule Necromancers do
       Repo.insert(%Set{id: 15, name: "Queen Medea"})
       Repo.insert(%Set{id: 16, name: "Grin"})
       Repo.insert(%Set{id: 17, name: "The Blackheart"})
-      Repo.insert(%Set{id: 18, name: "Erik the Summoner"})
+      Repo.insert(%Set{id: 18, name: "Erik Summoner"})
 
       Repo.insert!(%Spawn{set_id: 12, card_id: 125, title: "To-Me Ku-Pa!", blue: "To-Me Ku-Pa", yellow: "To-Me Ku-Pa", orange: "To-Me Ku-Pa", red: "To-Me Ku-Pa"})
       Repo.insert!(%Spawn{set_id: 12, card_id: 126, title: "To-Me Ku-Pa!", blue: "To-Me Ku-Pa", yellow: "To-Me Ku-Pa", orange: "To-Me Ku-Pa", red: "To-Me Ku-Pa"})
