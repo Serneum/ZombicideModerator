@@ -1,5 +1,0 @@
-<h2>New Set</h2>
-
-<%= render "form.html", Map.put(assigns, :action, set_path(@conn, :create)) %>
-
-<span><%= link "Back", to: set_path(@conn, :index) %></span>

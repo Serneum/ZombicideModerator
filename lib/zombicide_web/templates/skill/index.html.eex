@@ -14,15 +14,7 @@
     <tr>
       <td><%= skill.name %></td>
       <td><%= skill.description %></td>
-
-      <td class="text-right">
-        <span><%= link "Show", to: skill_path(@conn, :show, skill), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Edit", to: skill_path(@conn, :edit, skill), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Delete", to: skill_path(@conn, :delete, skill), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
-      </td>
     </tr>
 <% end %>
   </tbody>
 </table>
-
-<span><%= link "New Skill", to: skill_path(@conn, :new) %></span>
