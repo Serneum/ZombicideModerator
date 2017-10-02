@@ -1,0 +1,16 @@
+#card-holder {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.card {
+  color: white;
+  width: 240px;
+  height: 300px;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
+.card img {
+  border-radius: 20px;
+}

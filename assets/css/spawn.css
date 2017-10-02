@@ -1,0 +1,167 @@
+.spawn {
+  position: relative;
+  color: black;
+  text-align: center;
+}
+
+.spawn-level {
+  position: absolute;
+  left: 80px;
+  width: 100px;
+}
+
+.spawn-level .type {
+  font-family: ArekLatinSemiboldItalic;
+  font-size: 10.8pt;
+
+  position: absolute;
+  text-align: right;
+  width: 100px;
+  right: 18px;
+}
+
+.spawn img.red {
+  content: url('../images/spawn/SpawnRed.jpg');
+}
+
+.spawn img.blue {
+  content: url('../images/spawn/SpawnBlue.jpg');
+}
+
+.spawn img.darkblue {
+  content: url('../images/spawn/SpawnDarkBlue.jpg');
+}
+
+.spawn img.green {
+  content: url('../images/spawn/SpawnGreen.jpg');
+}
+
+.spawn img.yellow {
+  content: url('../images/spawn/SpawnYellow.jpg');
+}
+
+.spawn img.teal {
+  content: url('../images/spawn/SpawnTeal.jpg');
+}
+
+.spawn img.violet {
+  content: url('../images/spawn/SpawnViolet.jpg');
+}
+
+.spawn .title {
+  font-family: AlgoFYRegular;
+  font-size: 12.81pt;
+
+  position: absolute;
+  top: 3px;
+  left: 45px;
+  width: 150px;
+  text-align: center;
+}
+
+.spawn .id {
+  font-family: ArekLatinBoldItalic;
+  font-size: 8.43pt;
+
+  top: 54px;
+  left: 110px;
+  width: 20px;
+  text-align: center;
+}
+
+.spawn .spawn-level.red {
+  top: 85px;
+}
+
+.spawn .spawn-level.orange {
+  top: 135px;
+}
+
+.spawn .spawn-level.yellow {
+  top: 185px;
+}
+
+.spawn .spawn-level.blue {
+  top: 235px;
+}
+
+.spawn .amount {
+  position: absolute;
+  top: 6px;
+}
+
+.spawn .amount.multiplier {
+  font-family: AlgoFYRegular;
+  font-size: 21.26pt;
+  right: 42px;
+  top: 15px;
+}
+
+.spawn .amount.count {
+  font-family: AlgoFYBlack;
+  font-size: 27.81pt;
+  right: 23px;
+}
+
+.spawn .spawn-level .spawn-image {
+  left: 88px;
+  bottom: 30px;
+}
+
+.spawn-image img {
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 0px;
+}
+
+.spawn .spawn-level img.unknown {
+  content: url('../images/spawn/types/Unknown.png');
+}
+
+.spawn .spawn-level img.all-standard-walkers {
+  content: url('../images/spawn/types/AllWalkers.png');
+}
+
+.spawn .spawn-level img.all-standard-fatties {
+  content: url('../images/spawn/types/AllFatties.png');
+}
+
+.spawn .spawn-level img.all-standard-runners {
+  content: url('../images/spawn/types/AllRunners.png');
+}
+
+.spawn .spawn-level img.walker {
+  content: url('../images/spawn/types/Walker.png');
+}
+
+.spawn .spawn-level img.fatty {
+  content: url('../images/spawn/types/Fatty.png');
+}
+
+.spawn .spawn-level img.runner {
+  content: url('../images/spawn/types/Runner.png');
+}
+
+.spawn .spawn-level img.wolfz {
+  content: url('../images/spawn/types/Wolfz.png');
+}
+
+.spawn .spawn-level img.crowz {
+  content: url('../images/spawn/types/Crowz.png');
+}
+
+.spawn .spawn-level img.deadeye-walker {
+  content: url('../images/spawn/types/Deadeye.png');
+}
+
+.spawn .spawn-level img.npc {
+  content: url('../images/spawn/types/NPC.png');
+}
+
+.spawn .spawn-level img.abomination {
+  content: url('../images/spawn/types/Abomination.png');
+}
+
+.spawn .spawn-level img.wolfbomination {
+  content: url('../images/spawn/types/Wolfbomination.png');
+}
