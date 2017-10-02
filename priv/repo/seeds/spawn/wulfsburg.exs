@@ -3,16 +3,16 @@ defmodule Wulfsburg do
     alias Zombicide.{Repo, Cards.Set, Cards.Spawn}
 
     def seed() do
-      Repo.insert!(%Set{id: 2, name: "Wulfsburg"})
+      Repo.insert!(%Set{id: 2, name: "Wulfsburg", color: "blue"})
 
-      Repo.insert!(%Spawn{set_id: 2, blue: "Wolfz x1", yellow: "Wolfz x2", orange: "Wolfz x3", red: "Wolfz x4"})
-      Repo.insert!(%Spawn{set_id: 2, blue: "Wolfz x2", yellow: "Wolfz x3", orange: "Wolfz x4", red: "Wolfz x5"})
-      Repo.insert!(%Spawn{set_id: 2, blue: "Wolfz x3", yellow: "Wolfz x4", orange: "Wolfz x5", red: "Wolfz x6"})
-      Repo.insert!(%Spawn{set_id: 2, blue: "Wolfz x1", yellow: "Wolfz x2", orange: "Wolfz x3", red: "Wolfz x4"})
-      Repo.insert!(%Spawn{set_id: 2, blue: "Wolfz x2", yellow: "Wolfz x3", orange: "Wolfz x4", red: "Wolfz x5"})
-      Repo.insert!(%Spawn{set_id: 2, blue: "Wolfz x3", yellow: "Wolfz x4", orange: "Wolfz x5", red: "Wolfz x6"})
-      Repo.insert!(%Spawn{set_id: 2, blue: "Nothing in sight!", yellow: "Wolfbomination", orange: "Wolfbomination", red: "Wolfbomination"})
-      Repo.insert!(%Spawn{set_id: 2, blue: "Nothing in sight!", yellow: "Wolfbomination", orange: "Wolfbomination", red: "Wolfbomination"})
+      Repo.insert!(%Spawn{set_id: 2, card_id: 55, title: "Zombie Wolfz Invasion", blue: "Wolfz", b_count: 1, yellow: "Wolfz", y_count: 2, orange: "Wolfz", o_count: 3, red: "Wolfz", r_count: 4})
+      Repo.insert!(%Spawn{set_id: 2, card_id: 56, title: "Zombie Wolfz Invasion", blue: "Wolfz", b_count: 2, yellow: "Wolfz", y_count: 3, orange: "Wolfz", o_count: 4, red: "Wolfz", r_count: 5})
+      Repo.insert!(%Spawn{set_id: 2, card_id: 57, title: "Zombie Wolfz Invasion", blue: "Wolfz", b_count: 3, yellow: "Wolfz", y_count: 4, orange: "Wolfz", o_count: 5, red: "Wolfz", r_count: 6})
+      Repo.insert!(%Spawn{set_id: 2, card_id: 58, title: "Zombie Wolfz Invasion", blue: "Wolfz", b_count: 1, yellow: "Wolfz", y_count: 2, orange: "Wolfz", o_count: 3, red: "Wolfz", r_count: 4})
+      Repo.insert!(%Spawn{set_id: 2, card_id: 59, title: "Zombie Wolfz Invasion", blue: "Wolfz", b_count: 2, yellow: "Wolfz", y_count: 3, orange: "Wolfz", o_count: 4, red: "Wolfz", r_count: 5})
+      Repo.insert!(%Spawn{set_id: 2, card_id: 60, title: "Zombie Wolfz Invasion", blue: "Wolfz", b_count: 3, yellow: "Wolfz", y_count: 4, orange: "Wolfz", o_count: 5, red: "Wolfz", r_count: 6})
+      Repo.insert!(%Spawn{set_id: 2, card_id: 61, title: "Zombie Wolfz Invasion", blue: "Nothing in sight!", yellow: "Wolfbomination", y_count: 1, orange: "Wolfbomination", o_count: 1, red: "Wolfbomination", r_count: 1})
+      Repo.insert!(%Spawn{set_id: 2, card_id: 62, title: "Zombie Wolfz Invasion", blue: "Nothing in sight!", yellow: "Wolfbomination", y_count: 1, orange: "Wolfbomination", o_count: 1, red: "Wolfbomination", r_count: 1})
     end
   end
 end

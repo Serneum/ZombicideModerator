@@ -3,9 +3,10 @@ defmodule Zombicide.Cards.Set do
   import Ecto.Changeset
   alias Zombicide.Cards.Set
 
-
+  @derive {Poison.Encoder, except: [:__meta__]}
   schema "sets" do
     field :name, :string
+    field :color, :string, default: "red"
 
     timestamps()
   end
@@ -13,7 +14,7 @@ defmodule Zombicide.Cards.Set do
   @doc false
   def changeset(%Set{} = set, attrs) do
     set
-    |> cast(attrs, [:name])
+    |> cast(attrs, [:name, :color])
     |> validate_required([:name])
   end
 end

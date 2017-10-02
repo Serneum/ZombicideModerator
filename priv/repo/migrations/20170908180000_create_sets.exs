@@ -4,6 +4,7 @@ defmodule Zombicide.Repo.Migrations.CreateSets do
   def change do
     create table(:sets) do
       add :name, :string
+      add :color, :string, default: "red"
 
       timestamps()
     end
