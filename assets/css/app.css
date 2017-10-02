@@ -37,10 +37,9 @@ body.dark {
   content: url('../images/fork-me-github.png');
 }
 
-.row {
-  text-align: center;
-  vertical-align: middle;
-  line-height: 75px;
+#card-holder {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 img {
