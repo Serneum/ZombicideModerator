@@ -20,6 +20,7 @@ defmodule ZombicideWeb do
   def controller do
     quote do
       use Phoenix.Controller, namespace: ZombicideWeb
+      use ScoutApm.Instrumentation
       import Plug.Conn
       import ZombicideWeb.Router.Helpers
       import ZombicideWeb.Gettext

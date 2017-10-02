@@ -20,7 +20,7 @@ defmodule Zombicide.Mixfile do
   def application do
     [
       mod: {Zombicide.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :scout_apm]
     ]
   end
 
@@ -42,7 +42,8 @@ defmodule Zombicide.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:phoenix_gon, "~> 0.2.0"},
-      {:poison, "~> 3.1", override: true}
+      {:poison, "~> 3.1", override: true},
+      {:scout_apm, "~> 0.0"}
     ]
   end
 
