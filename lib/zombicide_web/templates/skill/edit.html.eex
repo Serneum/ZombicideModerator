@@ -1,5 +1,0 @@
-<h2>Edit Skill</h2>
-
-<%= render "form.html", Map.put(assigns, :action, skill_path(@conn, :update, @skill)) %>
-
-<span><%= link "Back", to: skill_path(@conn, :index) %></span>

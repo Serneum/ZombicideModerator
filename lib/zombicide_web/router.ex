@@ -19,10 +19,7 @@ defmodule ZombicideWeb.Router do
     get "/", PageController, :index
     post "/", PageController, :index
 
-    resources "/equipment", EquipmentController
-    resources "/sets", SetController
-    resources "/skills", SkillController
-    resources "/spawns", SpawnController
+    get "/skills", SkillController, :index
   end
 
   # Other scopes may use custom stacks.
