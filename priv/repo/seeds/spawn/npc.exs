@@ -4,7 +4,7 @@ defmodule NPC do
 
     def seed() do
       Repo.insert!(%Set{id: 5, name: "NPC-1", color: "violet"})
-      Repo.insert!(%Set{id: 6, name: "NPC-2", color: "violet"})
+      Repo.insert!(%Set{id: 6, name: "NPC-2", color: "green"})
 
       Repo.insert!(%Spawn{set_id: 5, card_id: 63, title: "N.P.C. Zombies Invasion", blue: "Nothing in sight!", yellow: "NPC", y_count: 5, orange: "NPC", o_count: 4, red: "NPC", r_count: 5})
       Repo.insert!(%Spawn{set_id: 5, card_id: 64, title: "N.P.C. Zombies Invasion", blue: "NPC", b_count: 1, yellow: "NPC", y_count: 1, orange: "NPC", o_count: 6, red: "NPC", r_count: 7})

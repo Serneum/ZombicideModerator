@@ -224,7 +224,7 @@ defmodule Zombicide.Cards do
 
   """
   def list_sets do
-    Repo.all(Set)
+    from(s in Set, order_by: s.id) |> Repo.all()
   end
 
   @doc """
