@@ -18,7 +18,7 @@ defmodule Zombicide.Rules do
 
   """
   def list_skills do
-    Repo.all(Skill)
+    from(s in Skill, order_by: s.name) |> Repo.all
   end
 
   @doc """
