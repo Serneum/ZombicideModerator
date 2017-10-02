@@ -145,11 +145,11 @@ global.cardSelector = new function() {
 
   function updateSpawnCounter() {
     var counter = document.getElementById('spawn-counter');
-    counter.innerHTML = 'Spawn Cards Remaining: ' + remainingSpawns.length;
+    counter.innerHTML = 'Spawn Cards: ' + remainingSpawns.length;
   };
 
   function updateEquipCounter() {
     var counter = document.getElementById('equipment-counter');
-    counter.innerHTML = 'Equipment Cards Remaining: ' + equipment.length;
+    counter.innerHTML = 'Equipment Cards: ' + equipment.length;
   };
 };
