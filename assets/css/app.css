@@ -29,6 +29,14 @@ body.dark {
   background-image: url("../images/background-bp.jpg");
 }
 
+.fork-me-github {
+  position: absolute;
+  border: 0;
+  top: 0;
+  right: 0;
+  content: url('../images/fork-me-github.png');
+}
+
 .row {
   text-align: center;
   vertical-align: middle;
