@@ -1,0 +1,24 @@
+@font-face {
+  font-family: ArekLatinItalic;
+  src: url('../fonts/areklatin-italic.ttf');
+}
+
+@font-face {
+  font-family: ArekLatinBoldItalic;
+  src: url('../fonts/areklatin-bold-italic.ttf');
+}
+
+@font-face {
+  font-family: ArekLatinSemiboldItalic;
+  src: url('../fonts/areklatin-semibold-italic.ttf');
+}
+
+@font-face {
+  font-family: AlgoFYRegular;
+  src: url('../fonts/algo-fy-regular.ttf');
+}
+
+@font-face {
+  font-family: AlgoFYBlack;
+  src: url('../fonts/algo-fy-black.ttf');
+}
