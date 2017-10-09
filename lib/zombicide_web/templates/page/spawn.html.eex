@@ -1,0 +1,34 @@
+<label>Spawns</label>
+<div>
+  <label>Sets: </label>
+  <%= for set <- Enum.slice(@spawn_sets, 0..5) do %>
+    <%= inputs_for @f, :sets, fn s -> %>
+      <span>
+        <%= checkbox(s, String.to_atom("#{set.id}")) %>
+        <%= label(s, String.to_atom("#{set.name}"), set.name) %>
+      </span>
+    <% end %>
+  <% end %>
+</div>
+<div>
+  <label>Abominations: </label>
+  <%= for set <- Enum.slice(@spawn_sets, 6..10) do %>
+    <%= inputs_for @f, :sets, fn s -> %>
+      <span>
+        <%= checkbox(s, String.to_atom("#{set.id}")) %>
+        <%= label(s, String.to_atom("#{set.name}"), set.name) %>
+      </span>
+    <% end %>
+  <% end %>
+</div>
+<div>
+  <label>Necromancers: </label>
+  <%= for set <- Enum.slice(@spawn_sets, 11..17) do %>
+    <%= inputs_for @f, :sets, fn s -> %>
+      <span>
+        <%= checkbox(s, String.to_atom("#{set.id}")) %>
+        <%= label(s, String.to_atom("#{set.name}"), set.name) %>
+      </span>
+    <% end %>
+  <% end %>
+</div>

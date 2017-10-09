@@ -30,6 +30,10 @@ defmodule Zombicide.Cards do
     Repo.all(Equipment)
   end
 
+  def list_equipment_sets do
+    from(s in Set, where: s.has_equipment == true, order_by: s.id) |> Repo.all()
+  end
+
   def list_equipment_in_set(set_ids) do
     list_cards_in_set(Equipment, set_ids)
   end
@@ -131,6 +135,10 @@ defmodule Zombicide.Cards do
   """
   def list_spawns do
     Repo.all(Spawn)
+  end
+
+  def list_spawn_sets do
+    from(s in Set, where: s.has_spawn == true, order_by: s.id) |> Repo.all()
   end
 
   @doc """

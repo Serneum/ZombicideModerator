@@ -3,7 +3,7 @@ defmodule DeadeyeWalkers do
     alias Zombicide.{Repo, Cards.Set, Cards.Spawn}
 
     def seed() do
-      Repo.insert!(%Set{id: 4, name: "Deadeye Walkers", color: "teal"})
+      Repo.insert!(%Set{id: 4, name: "Deadeye Walkers", color: "teal", has_spawn: true})
 
       Repo.insert!(%Spawn{set_id: 4, card_id: 99, title: "Deadeye Walker Invasion", blue: "Deadeye Walker", b_count: 1, yellow: "Deadeye Walker", y_count: 2, orange: "Deadeye Walker", o_count: 3, red: "Deadeye Walker", r_count: 4})
       Repo.insert!(%Spawn{set_id: 4, card_id: 100, title: "Deadeye Walker Invasion", blue: "Deadeye Walker", b_count: 2, yellow: "Deadeye Walker", y_count: 3, orange: "Deadeye Walker", o_count: 4, red: "Deadeye Walker", r_count: 5})

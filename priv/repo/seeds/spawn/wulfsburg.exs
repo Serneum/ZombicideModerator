@@ -3,7 +3,7 @@ defmodule Wulfsburg do
     alias Zombicide.{Repo, Cards.Set, Cards.Spawn}
 
     def seed() do
-      Repo.insert!(%Set{id: 2, name: "Wulfsburg", color: "blue"})
+      Repo.insert!(%Set{id: 2, name: "Wulfsburg", color: "blue", has_spawn: true, has_equipment: true})
 
       Repo.insert!(%Spawn{set_id: 2, card_id: 55, title: "Zombie Wolfz Invasion", blue: "Wolfz", b_count: 1, yellow: "Wolfz", y_count: 2, orange: "Wolfz", o_count: 3, red: "Wolfz", r_count: 4})
       Repo.insert!(%Spawn{set_id: 2, card_id: 56, title: "Zombie Wolfz Invasion", blue: "Wolfz", b_count: 2, yellow: "Wolfz", y_count: 3, orange: "Wolfz", o_count: 4, red: "Wolfz", r_count: 5})

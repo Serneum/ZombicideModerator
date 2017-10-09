@@ -1,0 +1,23 @@
+<label>Equipment</label>
+<div>
+  <label>Sets: </label>
+  <%= for set <- Enum.slice(@equip_sets, 0..1) do %>
+    <%= inputs_for @f, :equipment, fn e -> %>
+      <span>
+        <%= checkbox(e, String.to_atom("#{set.id}")) %>
+        <%= label(e, String.to_atom("#{set.name}"), set.name) %>
+      </span>
+    <% end %>
+  <% end %>
+</div>
+<div>
+  <label>Promos: </label>
+  <%= for set <- Enum.slice(@equip_sets, 2..10) do %>
+    <%= inputs_for @f, :equipment, fn e -> %>
+      <span>
+        <%= checkbox(e, String.to_atom("#{set.id}")) %>
+        <%= label(e, String.to_atom("#{set.name}"), set.name) %>
+      </span>
+    <% end %>
+  <% end %>
+</div>

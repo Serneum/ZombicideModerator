@@ -1,36 +1,9 @@
 <%= form_for @conn, page_path(@conn, :index), [as: :index], fn f -> %>
-  <div>
-    <label>Sets: </label>
-    <%= for set <- Enum.slice(@sets, 0..5) do %>
-      <%= inputs_for f, :sets, fn s -> %>
-        <span>
-          <%= checkbox(s, String.to_atom("#{set.id}")) %>
-          <%= label(s, String.to_atom("#{set.name}"), set.name) %>
-        </span>
-      <% end %>
-    <% end %>
+  <div class="spawn-sets">
+    <%= render "spawn.html", f: f, spawn_sets: @spawn_sets %>
   </div>
-  <div>
-    <label>Abominations: </label>
-    <%= for set <- Enum.slice(@sets, 6..10) do %>
-      <%= inputs_for f, :sets, fn s -> %>
-        <span>
-          <%= checkbox(s, String.to_atom("#{set.id}")) %>
-          <%= label(s, String.to_atom("#{set.name}"), set.name) %>
-        </span>
-      <% end %>
-    <% end %>
-  </div>
-  <div>
-    <label>Necromancers: </label>
-    <%= for set <- Enum.slice(@sets, 11..17) do %>
-      <%= inputs_for f, :sets, fn s -> %>
-        <span>
-          <%= checkbox(s, String.to_atom("#{set.id}")) %>
-          <%= label(s, String.to_atom("#{set.name}"), set.name) %>
-        </span>
-      <% end %>
-    <% end %>
+  <div class="equipment-sets">
+    <%= render "equipment.html", f: f, equip_sets: @equip_sets %>
   </div>
 
   <div>

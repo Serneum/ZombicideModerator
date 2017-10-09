@@ -7,6 +7,8 @@ defmodule Zombicide.Cards.Set do
   schema "sets" do
     field :name, :string
     field :color, :string, default: "red"
+    field :has_spawn, :boolean, default: false, null: false
+    field :has_equipment, :boolean, default: false, null: false
 
     timestamps()
   end
@@ -14,7 +16,7 @@ defmodule Zombicide.Cards.Set do
   @doc false
   def changeset(%Set{} = set, attrs) do
     set
-    |> cast(attrs, [:name, :color])
+    |> cast(attrs, [:name, :color, :has_spawn, :has_equipment])
     |> validate_required([:name])
   end
 end

@@ -3,13 +3,13 @@ defmodule Necromancers do
     alias Zombicide.{Repo, Cards.Set, Cards.Spawn}
 
     def seed() do
-      Repo.insert(%Set{id: 12, name: "To-Me Ku-Pa"})
-      Repo.insert(%Set{id: 13, name: "Ostokar the Pale"})
-      Repo.insert(%Set{id: 14, name: "Evil Troy"})
-      Repo.insert(%Set{id: 15, name: "Queen Medea"})
-      Repo.insert(%Set{id: 16, name: "Grin"})
-      Repo.insert(%Set{id: 17, name: "The Blackheart"})
-      Repo.insert(%Set{id: 18, name: "Erik Summoner"})
+      Repo.insert(%Set{id: 12, name: "To-Me Ku-Pa", has_spawn: true})
+      Repo.insert(%Set{id: 13, name: "Ostokar the Pale", has_spawn: true})
+      Repo.insert(%Set{id: 14, name: "Evil Troy", has_spawn: true})
+      Repo.insert(%Set{id: 15, name: "Queen Medea", has_spawn: true})
+      Repo.insert(%Set{id: 16, name: "Grin", has_spawn: true})
+      Repo.insert(%Set{id: 17, name: "The Blackheart", has_spawn: true})
+      Repo.insert(%Set{id: 18, name: "Erik Summoner", has_spawn: true})
 
       Repo.insert!(%Spawn{set_id: 12, card_id: 125, title: "To-Me Ku-Pa!", blue: "To-Me Ku-Pa", yellow: "To-Me Ku-Pa", orange: "To-Me Ku-Pa", red: "To-Me Ku-Pa"})
       Repo.insert!(%Spawn{set_id: 12, card_id: 126, title: "To-Me Ku-Pa!", blue: "To-Me Ku-Pa", yellow: "To-Me Ku-Pa", orange: "To-Me Ku-Pa", red: "To-Me Ku-Pa"})

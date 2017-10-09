@@ -21,6 +21,7 @@ Code.require_file("seeds/spawn/necromancers.exs", __DIR__)
 
 Code.require_file("seeds/equip/black_plague.exs", __DIR__)
 Code.require_file("seeds/equip/wulfsburg.exs", __DIR__)
+Code.require_file("seeds/equip/ice_blast.exs", __DIR__)
 
 Skills.seed()
 
@@ -34,3 +35,4 @@ Necromancers.Spawn.seed()
 
 BlackPlague.Equip.seed()
 Wulfsburg.Equip.seed()
+IceBlast.Equip.seed()

@@ -3,7 +3,7 @@ defmodule MurderOfCrowz do
     alias Zombicide.{Repo, Cards.Set, Cards.Spawn}
 
     def seed() do
-      Repo.insert!(%Set{id: 3, name: "Murder of Crows", color: "blue"})
+      Repo.insert!(%Set{id: 3, name: "Murder of Crows", color: "blue", has_spawn: true})
 
       Repo.insert!(%Spawn{set_id: 3, card_id: 105, title: "Murder of Crowz", blue: "Crowz", b_count: 2, yellow: "Crowz", y_count: 3, orange: "Crowz", o_count: 4, red: "Crowz", r_count: 5})
       Repo.insert!(%Spawn{set_id: 3, card_id: 106, title: "Murder of Crowz", blue: "Crowz", b_count: 2, yellow: "Crowz", y_count: 3, orange: "Crowz", o_count: 4, red: "Crowz", r_count: 5})

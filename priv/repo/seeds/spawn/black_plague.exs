@@ -3,7 +3,7 @@ defmodule BlackPlague do
     alias Zombicide.{Repo, Cards.Set, Cards.Spawn}
 
     def seed() do
-      Repo.insert!(%Set{id: 1, name: "Black Plague", color: "red"})
+      Repo.insert!(%Set{id: 1, name: "Black Plague", color: "red", has_spawn: true, has_equipment: true})
 
       Repo.insert!(%Spawn{set_id: 1, card_id: 1, title: "Standard Zombies Invasion", blue: "Nothing in sight!", yellow: "Runner", y_count: 2, orange: "Walker", o_count: 5, red: "Fatty", r_count: 2})
       Repo.insert!(%Spawn{set_id: 1, card_id: 2, title: "Standard Zombies Invasion", blue: "Nothing in sight!", yellow: "Fatty", y_count: 2, orange: "Walker", o_count: 5, red: "Walker", r_count: 5})

@@ -33,3 +33,20 @@ img {
 .inline-block {
   display: inline-block;
 }
+
+.equipment-sets, .spawn-sets {
+  width: 50%;
+  height: 270px;
+  float: left;
+}
+
+.spawn-sets div, .equipment-sets div {
+  padding-bottom: 10px;
+  padding-left: 25px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1080px;
+  }
+}
