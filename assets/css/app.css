@@ -34,13 +34,17 @@ img {
   display: inline-block;
 }
 
-.equipment-sets, .spawn-sets {
+.sets-wrapper {
+  display: block;
+  overflow: auto;
+}
+
+.sets {
   width: 50%;
-  height: 270px;
   float: left;
 }
 
-.spawn-sets div, .equipment-sets div {
+.sets div {
   padding-bottom: 10px;
   padding-left: 25px;
 }

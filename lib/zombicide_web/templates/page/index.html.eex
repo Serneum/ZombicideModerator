@@ -1,9 +1,11 @@
 <%= form_for @conn, page_path(@conn, :index), [as: :index], fn f -> %>
-  <div class="spawn-sets">
-    <%= render "spawn.html", f: f, spawn_sets: @spawn_sets %>
-  </div>
-  <div class="equipment-sets">
-    <%= render "equipment.html", f: f, equip_sets: @equip_sets %>
+  <div class="sets-wrapper">
+    <div class="sets">
+      <%= render "spawn.html", f: f, spawn_sets: @spawn_sets %>
+    </div>
+    <div class="sets">
+      <%= render "equipment.html", f: f, equip_sets: @equip_sets %>
+    </div>
   </div>
 
   <div>
