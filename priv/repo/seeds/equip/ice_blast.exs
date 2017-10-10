@@ -1,9 +1,9 @@
 defmodule IceBlast do
   defmodule Equip do
-    alias Zombicide.{Repo, Cards.Set}
+    alias Zombicide.Cards
 
     def seed() do
-      Repo.insert!(%Set{id: 19, name: "Ice Blast", has_equipment: true})
+      Cards.create_equipment(%{id: 19, name: "Ice Blast", has_equipment: true})
     end
   end
 end
