@@ -66,8 +66,8 @@ defmodule Zombicide.Cards do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_equipment(attrs \\ %{}) do
-    %Equipment{}
+  def create_equipment(set_id, attrs \\ %{}) do
+    %Equipment{set_id: set_id}
     |> Equipment.changeset(attrs)
     |> Repo.insert()
   end
@@ -169,8 +169,8 @@ defmodule Zombicide.Cards do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_spawn(attrs \\ %{}) do
-    %Spawn{}
+  def create_spawn(set_id, attrs \\ %{}) do
+    %Spawn{set_id: set_id}
     |> Spawn.changeset(attrs)
     |> Repo.insert()
   end
