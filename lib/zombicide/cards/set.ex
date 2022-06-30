@@ -7,8 +7,8 @@ defmodule Zombicide.Cards.Set do
   schema "sets" do
     field :name, :string
     field :color, :string, default: "red"
-    field :has_spawn, :boolean, default: false, null: false
-    field :has_equipment, :boolean, default: false, null: false
+    field :has_spawn, :boolean, default: false
+    field :has_equipment, :boolean, default: false
 
     has_many :spawns, Zombicide.Cards.Spawn, on_delete: :delete_all
     has_many :equipment, Zombicide.Cards.Equipment, on_delete: :delete_all
