@@ -39,7 +39,6 @@ defmodule ZombicideWeb.Endpoint do
     key: "_zombicide_key",
     signing_salt: "pYkdjlty"
 
-  plug PhoenixGon.Pipeline
   plug ZombicideWeb.Router
 
   @doc """

@@ -1,6 +1,5 @@
 defmodule ZombicideWeb.PageController do
   use ZombicideWeb, :controller
-  import PhoenixGon.Controller
 
   def index(conn, params) do
     spawn_sets = Zombicide.Cards.list_spawn_sets()
@@ -8,7 +7,7 @@ defmodule ZombicideWeb.PageController do
 
     spawns = get_set_ids(params["index"]["sets"]) |> Zombicide.Cards.list_spawns_in_set()
     equipment = get_set_ids(params["index"]["equipment"]) |> Zombicide.Cards.list_equipment_in_set()
-    conn = put_gon(conn, spawns: spawns, equipment: equipment)
+    # conn = put_gon(conn, spawns: spawns, equipment: equipment)
 
     render(conn, "index.html", spawn_sets: spawn_sets, equip_sets: equip_sets)
   end
