@@ -34,8 +34,8 @@ defmodule Zombicide.Mixfile do
   defp deps do
     [
       {:ecto_sql, "~> 3.0"},
-      {:phoenix, "~> 1.4.0"},
-      {:phoenix_pubsub, "~> 1.0"},
+      {:phoenix, "~> 1.5.0"},
+      {:phoenix_pubsub, "~> 2.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.10"},
@@ -43,7 +43,7 @@ defmodule Zombicide.Mixfile do
       {:gettext, "~> 0.11"},
       {:phoenix_gon, "~> 0.2.0"},
       {:plug, "~> 1.7"},
-      {:plug_cowboy, "~> 2.0"},
+      {:plug_cowboy, "~> 2.1"},
       {:jason, "~> 1.0"},
       {:scout_apm, "~> 0.0"}
     ]
