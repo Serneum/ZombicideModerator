@@ -5,7 +5,7 @@ input[type="button"], button[type="submit"] {
 
 body.dark {
   color: white;
-  background-image: url("../images/background-bp.jpg");
+  background-image: url("/images/background-bp.jpg");
 }
 
 .fork-me-github {
@@ -13,7 +13,7 @@ body.dark {
   border: 0;
   top: 0;
   right: 0;
-  content: url('../images/fork-me-github.png');
+  content: url('/images/fork-me-github.png');
 }
 
 img {
