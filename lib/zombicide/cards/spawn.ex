@@ -3,7 +3,7 @@ defmodule Zombicide.Cards.Spawn do
   import Ecto.Changeset
   alias Zombicide.Cards.Spawn
 
-  @derive {Poison.Encoder, except: [:__meta__]}
+  @derive {Jason.Encoder, except: [:__meta__]}
   schema "spawns" do
     field :card_id, :integer
     field :title, :string
