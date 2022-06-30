@@ -31,6 +31,13 @@
   </div>
 </div>
 
+
+<div data-spawns="<%= @spawns %>" data-equipment="<%= @equipment %>" id="data-container"></div>
+
 <script type="text/javascript">
-  cardSelector.init(window.Gon.getAsset('spawns'), window.Gon.getAsset('equipment'));
+  var container = document.getElementById("data-container");
+  var spawns = JSON.parse(container.getAttribute("data-spawns"));
+  var equipment = JSON.parse(container.getAttribute("data-equipment"));
+
+  cardSelector.init(spawns, equipment);
 </script>

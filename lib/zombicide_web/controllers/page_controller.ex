@@ -5,11 +5,10 @@ defmodule ZombicideWeb.PageController do
     spawn_sets = Zombicide.Cards.list_spawn_sets()
     equip_sets = Zombicide.Cards.list_equipment_sets()
 
-    spawns = get_set_ids(params["index"]["sets"]) |> Zombicide.Cards.list_spawns_in_set()
-    equipment = get_set_ids(params["index"]["equipment"]) |> Zombicide.Cards.list_equipment_in_set()
-    # conn = put_gon(conn, spawns: spawns, equipment: equipment)
+    spawns = get_set_ids(params["index"]["sets"]) |> Zombicide.Cards.list_spawns_in_set() |> Jason.encode!()
+    equipment = get_set_ids(params["index"]["equipment"]) |> Zombicide.Cards.list_equipment_in_set() |> Jason.encode!()
 
-    render(conn, "index.html", spawn_sets: spawn_sets, equip_sets: equip_sets)
+    render(conn, "index.html", spawn_sets: spawn_sets, spawns: spawns, equip_sets: equip_sets, equipment: equipment)
   end
 
   defp get_set_ids(param) do
