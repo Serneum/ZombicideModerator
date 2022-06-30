@@ -2,7 +2,7 @@ defmodule ZombicideWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :zombicide
 
   socket "/socket", ZombicideWeb.UserSocket,
-    websocket: true
+    websocket: [timeout: 45_000]
 
   # Serve at "/" the static files from "priv/static" directory.
   #
