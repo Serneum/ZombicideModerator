@@ -14,8 +14,7 @@ config :zombicide, ZombicideWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "aNBrdJ6oQiAe+3+U62zr5Kxe52gFZB9YiSgZ/6/bXEU+QbEVMUhYYT2tmcmIO7+G",
   render_errors: [view: ZombicideWeb.ErrorView, accepts: ~w(html json)],
-  pubsub_server: [name: Zombicide.PubSub,
-                  adapter: Phoenix.PubSub.PG2]
+  pubsub_server: Zombicide.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,
