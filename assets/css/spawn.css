@@ -21,31 +21,31 @@
 }
 
 .spawn img.red {
-  content: url('../images/spawn/SpawnRed.jpg');
+  content: url('/images/spawn/SpawnRed.jpg');
 }
 
 .spawn img.blue {
-  content: url('../images/spawn/SpawnBlue.jpg');
+  content: url('/images/spawn/SpawnBlue.jpg');
 }
 
 .spawn img.darkblue {
-  content: url('../images/spawn/SpawnDarkBlue.jpg');
+  content: url('/images/spawn/SpawnDarkBlue.jpg');
 }
 
 .spawn img.green {
-  content: url('../images/spawn/SpawnGreen.jpg');
+  content: url('/images/spawn/SpawnGreen.jpg');
 }
 
 .spawn img.yellow {
-  content: url('../images/spawn/SpawnYellow.jpg');
+  content: url('/images/spawn/SpawnYellow.jpg');
 }
 
 .spawn img.teal {
-  content: url('../images/spawn/SpawnTeal.jpg');
+  content: url('/images/spawn/SpawnTeal.jpg');
 }
 
 .spawn img.violet {
-  content: url('../images/spawn/SpawnViolet.jpg');
+  content: url('/images/spawn/SpawnViolet.jpg');
 }
 
 .spawn .title {
@@ -115,53 +115,53 @@
 }
 
 .spawn .spawn-level img.unknown {
-  content: url('../images/spawn/types/Unknown.png');
+  content: url('/images/spawn/types/Unknown.png');
 }
 
 .spawn .spawn-level img.all-standard-walkers {
-  content: url('../images/spawn/types/AllWalkers.png');
+  content: url('/images/spawn/types/AllWalkers.png');
 }
 
 .spawn .spawn-level img.all-standard-fatties {
-  content: url('../images/spawn/types/AllFatties.png');
+  content: url('/images/spawn/types/AllFatties.png');
 }
 
 .spawn .spawn-level img.all-standard-runners {
-  content: url('../images/spawn/types/AllRunners.png');
+  content: url('/images/spawn/types/AllRunners.png');
 }
 
 .spawn .spawn-level img.walker {
-  content: url('../images/spawn/types/Walker.png');
+  content: url('/images/spawn/types/Walker.png');
 }
 
 .spawn .spawn-level img.fatty {
-  content: url('../images/spawn/types/Fatty.png');
+  content: url('/images/spawn/types/Fatty.png');
 }
 
 .spawn .spawn-level img.runner {
-  content: url('../images/spawn/types/Runner.png');
+  content: url('/images/spawn/types/Runner.png');
 }
 
 .spawn .spawn-level img.wolfz {
-  content: url('../images/spawn/types/Wolfz.png');
+  content: url('/images/spawn/types/Wolfz.png');
 }
 
 .spawn .spawn-level img.crowz {
-  content: url('../images/spawn/types/Crowz.png');
+  content: url('/images/spawn/types/Crowz.png');
 }
 
 .spawn .spawn-level img.deadeye-walker {
-  content: url('../images/spawn/types/Deadeye.png');
+  content: url('/images/spawn/types/Deadeye.png');
 }
 
 .spawn .spawn-level img.npc {
-  content: url('../images/spawn/types/NPC.png');
+  content: url('/images/spawn/types/NPC.png');
 }
 
 .spawn .spawn-level img.abomination {
-  content: url('../images/spawn/types/Abomination.png');
+  content: url('/images/spawn/types/Abomination.png');
 }
 
 .spawn .spawn-level img.wolfbomination {
-  content: url('../images/spawn/types/Wolfbomination.png');
+  content: url('/images/spawn/types/Wolfbomination.png');
 }

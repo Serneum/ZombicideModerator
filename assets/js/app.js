@@ -19,7 +19,10 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-import css from '../css/app.css';
+import '../css/app.css';
+import '../css/card.css';
+import '../css/spawn.css';
+import '../css/font-faces.css';
 
 global.cardSelector = new function() {
   var remainingSpawns = [];
