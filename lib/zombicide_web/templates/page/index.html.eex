@@ -1,4 +1,4 @@
-<%= form_for @conn, page_path(@conn, :index), [as: :index], fn f -> %>
+<%= form_for @conn, Routes.page_path(@conn, :index), [as: :index], fn f -> %>
   <div class="sets-wrapper">
     <div class="sets">
       <%= render "spawn.html", f: f, spawn_sets: @spawn_sets %>

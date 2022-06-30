@@ -1,7 +1,8 @@
 defmodule ZombicideWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :zombicide
 
-  socket "/socket", ZombicideWeb.UserSocket
+  socket "/socket", ZombicideWeb.UserSocket,
+    websocket: true
 
   # Serve at "/" the static files from "priv/static" directory.
   #

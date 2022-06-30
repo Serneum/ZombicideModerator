@@ -21,8 +21,8 @@ defmodule ZombicideWeb do
     quote do
       use Phoenix.Controller, namespace: ZombicideWeb
       use ScoutApm.Instrumentation
+      alias ZombicideWeb.Router.Helpers, as: Routes
       import Plug.Conn
-      import ZombicideWeb.Router.Helpers
       import ZombicideWeb.Gettext
     end
   end
@@ -38,7 +38,7 @@ defmodule ZombicideWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import ZombicideWeb.Router.Helpers
+      alias ZombicideWeb.Router.Helpers, as: Routes
       import ZombicideWeb.ErrorHelpers
       import ZombicideWeb.Gettext
     end
