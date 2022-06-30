@@ -1,5 +1,5 @@
 defmodule Zombicide.Repo do
-  use Ecto.Repo, otp_app: :zombicide
+  use Ecto.Repo, otp_app: :zombicide, adapter: Ecto.Adapters.Postgres
 
   @doc """
   Dynamically loads the repository url from the
